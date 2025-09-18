@@ -1,11 +1,116 @@
-/* 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+html,
+body {
+    height: 100%;
+}
 
-*/
+body {
+    background: #f5f5f5;
+    color: #222;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: grid;
+    place-items: start center;
+    padding: 48px 16px;
+}
+
+h1.app-title {
+    font-size: 96px;
+    font-weight: 100;
+    color: rgba(175, 47, 47, 0.3);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.todo-card {
+    width: 520px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.todo-input-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid #ededed;
+}
+
+.todo-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 8px 0;
+    color: #333;
+}
+
+.todo-input::placeholder {
+    color: #bdbdbd;
+}
+
+.add-btn {
+    border: none;
+    background: #fff;
+    font-size: 26px;
+    line-height: 1;
+    padding: 0 8px;
+    cursor: pointer;
+    color: #bdbdbd;
+    transition: transform 0.08s ease;
+}
+
+.add-btn:active {
+    transform: scale(0.93);
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid #ededed;
+    font-size: 18px;
+    background: #fff;
+}
+
+.empty-row {
+    padding: 16px;
+    text-align: center;
+    color: #bdbdbd;
+    font-style: italic;
+}
+
+.todo-footer {
+    padding: 10px 16px;
+    color: #777;
+    font-size: 14px;
+}
+.delete-btn {
+  opacity: 0;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  color: #cc9a9a;
+  padding: 4px 8px;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.todo-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn:hover {
+  color: #af5b5e;
+}
